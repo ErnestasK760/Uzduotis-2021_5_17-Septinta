@@ -18,7 +18,6 @@
             position: relative;
             background-color: #657AD3;
             font: normal normal normal 16px/19px Gill Sans MT;
-            font-family:'Gill Sans','Gill Sans MT',Calibri,'Trebuchet MS',sans-serif;
         }
 
         .container {
@@ -41,6 +40,7 @@
         .right-column {
             width: 60%;
             background-color: #FFFFFF ;
+            position: relative;
         }
 
         .left-column-container {
@@ -54,9 +54,15 @@
             position:relative;
         }
 
+        .right-column-container {
+            padding-left: 60px;
+            padding-top: 46px;
+            padding-right: 60px;
+            padding-bottom: 46px;
+        }
+
         h1 {
             font: normal normal normal 32px/37px Gill Sans MT;
-            font-family:'Gill Sans','Gill Sans MT',Calibri,'Trebuchet MS',sans-serif;
             color: #FFFFFF;
             margin: 0;
             padding-top: 32px;
@@ -64,10 +70,9 @@
 
         p, a {
             display: inline-block;
-            font: normal normal normal 16px/19px Gill Sans;
-            font-family:'Gill Sans','Gill Sans MT',Calibri,'Trebuchet MS',sans-serif;
+            font: normal normal normal 16px/19px Gill Sans MT;
             color: #FFFFFF;
-            margin: 0;
+            margin: 0; 
         }
 
         .links {
@@ -75,6 +80,63 @@
             bottom: 25px;
         }
 
+        label {
+            display:block;
+            font: normal normal normal 13px/15px Gill Sans MT;
+            color: #000000;
+            padding-bottom:12px;
+        }
+
+
+        .input {
+            margin-bottom: 33px;
+        }
+
+        input {
+            display: block;
+            border: none;
+            width: 100%;
+            padding-left: 0;
+            padding-bottom: 6px;
+            border-bottom: 1px solid #808080;
+        }
+
+        input:focus {
+            border: none;
+            outline: none;
+            border-bottom: 1px solid #808080;
+        }
+
+        ::-webkit-input-placeholder {
+            font: normal normal normal 18px/21px Gill Sans MT;
+            color: #A9A9A9;
+        }
+
+        .btn {
+            font: normal normal normal 18px/21px Gill Sans MT;
+            color: #FFFFFF;
+            background-color: #FFC0CB;
+            border-radius: 20px;
+            padding-left: 40px;
+            padding-right:40px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border: none;
+            box-shadow: 0 4px 8px darkgray;
+        }
+
+        .btn:hover {
+            cursor:pointer;
+            box-shadow: 0 4px 8px grey;
+        }
+
+        .close {
+            font: normal normal normal 30px/35px Gill Sans MT;
+            color: #000000;
+            position:absolute;
+            top: 14px;
+            right: 23px;
+        }
 
     </style>
 </head>
@@ -91,7 +153,31 @@
                 </div>
             </div>
         </div>
-        <div class='right-column'>Test</div>
+        <div class='right-column'>
+            <div class='right-column-container'>
+                <span class='close'>x</span>
+                <div class='input'>
+                    <label for='username'>USERNAME</label>
+                    <input placeholder='Enter your user name' type='text' id='username' name='username' />
+                </div>
+                <div class='input'>
+                    <label for='email'>E-MAIL</label>
+                    <input placeholder='Enter your E-mail' type='text' id='email' name='email' />
+                </div>
+                <div class='input'>
+                    <label for='password'>PASSWORD</label>
+                    <input placeholder='Enter your password' type='text' id='password' name='password' />
+                </div>
+                <div class='input'>
+                    <label for='repeat_password'>REPEAT PASSWORD</label>
+                    <input placeholder='Enter your password' type='text' id='repeat_password' name='repeat_password' />
+                </div>
+
+                <div class='right-column-bottom-action'>
+                    <button class='btn'>Get started</button>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
